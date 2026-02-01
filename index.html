@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Tasker</title>
+</head>
+
+<body>
+    <div id = "content-container">
+        <aside id = "sidebar">
+            <h1>Tasker</h1>
+            <ul>
+                <li><a href = "#" id="active"> Tasks </a></li>
+            </ul>
+        </aside>
+    
+        <div class = "main-content">
+            <header>
+                <h1>Tasks</h1>
+                <div id = "content-buttons">
+                    <button id = "new-task-button">New Task +</button>
+                </div>
+            </header>
+
+            <div id = "task-container">
+                <div id = "task-data">
+                    <h2>Title Task</h2>
+                    <p>Description of the task</p>
+                </div>
+                <input type = "checkbox" id = "task-checkbox">
+            </div>
+        </div>
+    </div>
+
+    <!--This is the code for the modal form to add tasks-->
+    <div id = "add-task-modal" class = "modal">
+        
+        <div id = "modal-content">
+            <h1>New Task</h1>
+            <form>
+                <label for = "task-title">Task Title</label><br>
+                <input type = "text" id = "task-title"><br><br>
+
+                <label for = "task-desc">Task Description</label><br>
+                <textarea type = "text"  id = "task-desc"></textarea> 
+                <br><br>
+
+                <div id = "modal-button-container">
+                    <button id = "close-modal-button">Close</button> 
+                    <input type = "submit" id = "submit-button">
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <!--This it the link to the app.js script-->
+    <script src = "js/app.js" ></script> 
+</body>
+
+</html>
