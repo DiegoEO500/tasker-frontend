@@ -1,5 +1,3 @@
-console.log("App.js is connected to the index.html");
-
 var modal = document.getElementById("add-task-modal");
 
 var button = document.getElementById("new-task-button");

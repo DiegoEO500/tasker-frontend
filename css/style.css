@@ -71,49 +71,96 @@ body{
 
 /*This secction is where i have the task data*/
 .main-content #task-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task-item{
     background-color: var(--color-secondary);
     border-radius: 10px;
-    padding: 2px 0px;
+    padding: 16px 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-#task-data{
-    margin-left: 10px;
+#task-data,
+.task-data{
+    margin-left: 0;
+    flex: 1;
+    min-width: 0;
 }
 
-#task-data h1{
+#task-data h1,
+#task-data h2,
+.task-data h1,
+.task-data h2{
     padding: 0;
+    margin: 0 0 4px 0;
 }
 
-#task-data p{
+#task-data p,
+.task-data p{
     padding: 0;
+    margin: 0;
 }
 
-#task-checkbox{
-    margin-top: 27px;
-    margin-right: 10px;
+.task-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+
+.task-delete-btn {
+    background-color: var(--color-primary);
+    color: var(--color-accent);
+    border: none;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.task-delete-btn:hover {
+    filter: brightness(70%);
+}
+
+.task-delete-btn:active {
+    filter: brightness(70%);
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+#task-checkbox,
+.task-checkbox{
+    margin: 0;
     appearance: none;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     background-color: var(--color-primary);
     border: 1px solid var(--color-primary);
     border-radius: 5px;
     position: relative;
-
 }
 
-#task-checkbox:checked {
+#task-checkbox:checked,
+.task-checkbox:checked {
     border-color: var(--color-accent);
 }
 
-#task-checkbox:checked::after{
+#task-checkbox:checked::after,
+.task-checkbox:checked::after{
     content: "✓";
     color: var(--color-accent);
     position: absolute;
-    font-size: 45px;
-    top: -10%;
-    left:10%;
+    font-size: 38px;
+    top: -8%;
+    left: 8%;
 }
 
 /*This portion is about the new task button*/
